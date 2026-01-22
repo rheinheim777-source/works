@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【0から始めるWEBデザイン】5日間無料チャレンジプログラム - Renewed</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1e3a8a', // Deep Blue
+                        secondary: '#3b82f6', // Bright Blue
+                        accent: '#f59e0b', // Gold/Orange for CTA
+                        dark: '#1f2937',
+                        light: '#f3f4f6',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(30, 58, 138, 0.85), rgba(30, 58, 138, 0.7)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .skew-divider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        }
+        .skew-divider svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 50px;
+        }
+        .skew-divider .shape-fill {
+            fill: #ffffff;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #fbbf24, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Mobile adjustment for dates */
+        @media (max-width: 640px) {
+            .date-box {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased bg-gray-50">
+
+    <!-- Header (Sticky) -->
+    <header class="fixed w-full bg-white/95 backdrop-blur shadow-sm z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="font-bold text-xl text-primary tracking-tighter">
+                L-works<span class="text-secondary">.design</span>
+            </div>
+            <a href="#register" class="bg-red-600 hover:bg-red-700 text-white text-sm font-bold py-2 px-4 rounded-full transition-colors duration-300 shadow-lg">
+                無料で参加する
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center justify-center relative pt-20 pb-20 text-white">
+        <div class="container mx-auto px-4 text-center z-10">
+            
+            <!-- Badge -->
+            <div class="inline-block bg-accent text-white font-bold px-6 py-2 rounded-full mb-6 shadow-lg animate-bounce">
+                完全無料・未経験OK
+            </div>
+
+            <!-- Headline -->
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight drop-shadow-lg">
+                ゼロから始める<br class="md:hidden">WEBデザイン<br>
+                <span class="gradient-text text-4xl md:text-6xl lg:text-7xl">5日間チャレンジ</span>
+                <br class="md:hidden">プログラム
+            </h1>
+
+            <p class="text-lg md:text-xl font-medium mb-8 text-gray-200 max-w-2xl mx-auto">
+                地方に住んでいても、未経験でも、<br class="md:hidden">Webデザインで人生を変える5日間。<br>
+                スキルを身につけ、場所を選ばずに働く自由を手に入れませんか？
+            </p>
+
+            <!-- Countdown / Date -->
+            <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 max-w-3xl mx-auto border border-white/20 mb-10">
+                <p class="text-sm md:text-base font-bold text-accent mb-2">NEXT CHALLENGE STARTS IN</p>
+                <div class="text-2xl md:text-4xl font-bold font-mono tracking-widest mb-4" id="countdown">
+                    00<span class="text-sm">日</span> 00<span class="text-sm">時間</span> 00<span class="text-sm">分</span> 00<span class="text-sm">秒</span>
+                </div>
+                <div class="bg-white text-primary font-bold py-3 px-6 rounded-lg text-lg md:text-2xl shadow-inner">
+                    2026年 2月2日 (月) 19:00 スタート
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="flex flex-col items-center gap-4">
+                <a href="#register" class="group bg-red-600 hover:bg-red-700 text-white text-xl md:text-2xl font-bold py-5 px-10 rounded-full shadow-[0_0_20px_rgba(220,38,38,0.6)] hover:shadow-[0_0_30px_rgba(220,38,38,0.8)] transition-all duration-300 transform hover:-translate-y-1 w-full max-w-md text-center">
+                    <span class="block text-sm font-normal mb-1 opacity-90">満席になる前に</span>
+                    今すぐ無料でエントリーする
+                    <i class="fas fa-chevron-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <p class="text-sm text-gray-300">※Photoshop等の有料ソフトは不要です</p>
+            </div>
+        </div>
+
+        <!-- Wave Divider -->
+        <div class="skew-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Introduction / Philosophy -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-primary mb-8 relative inline-block">
+                    なぜ、無料で提供するのか？
+                    <span class="absolute -bottom-2 left-0 w-full h-1 bg-accent rounded-full"></span>
+                </h2>
+                <div class="text-left text-lg leading-loose text-gray-700 space-y-6 bg-gray-50 p-8 rounded-2xl border-l-4 border-primary shadow-sm">
+                    <p>
+                        私たちが「5日間チャレンジ」を無料で提供するのには、大きな目的があります。<br>
+                        それは、<strong>「地方に住む方々や、在宅で新しい働き方を探している方の未来を広げること」</strong>です。
+                    </p>
+                    <p>
+                        リモートワークの普及により、都市部に住まなくてもさまざまな仕事に挑戦できる環境が整っています。その中でも、Webデザインはスキルを身につけることで場所を選ばずに働くことができる仕事です。
+                    </p>
+                    <p>
+                        「地方だから仕事がない」「未経験だから無理かもしれない」<br>
+                        そんな悩みを抱えている方も多いのではないでしょうか？
+                    </p>
+                    <p class="font-bold text-primary">
+                        私たちは、地域に縛られず自由に働ける人を増やし、地方の活性化につなげたいという想いから、この「5日間チャレンジ」を地方限定で無料開催いたします。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features / Benefits -->
+    <section class="py-20 bg-gray-100 relative overflow-hidden">
+        <!-- Background Decor -->
+        <div class="absolute top-0 left-0 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-64 h-64 bg-yellow-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 translate-x-1/2 translate-y-1/2"></div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-accent font-bold tracking-widest text-sm uppercase">Features</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2">
+                    未経験でも安心。<br>3つの「参加しやすい」理由
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-primary">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-primary text-2xl mb-6 mx-auto">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">有料ソフト不要</h3>
+                    <p class="text-gray-600 text-center">
+                        高価なPhotoshopなどのソフトを購入する必要はありません。ブラウザで使える無料のデザインツールを使用しますので、パソコンさえあればすぐに始められます。
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-accent">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center text-accent text-2xl mb-6 mx-auto">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">録画配信あり</h3>
+                    <p class="text-gray-600 text-center">
+                        「19時の開始に間に合わないかも...」という方もご安心ください。全ての講義は録画され、期間中はいつでも視聴して課題に取り組むことができます。
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-primary">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-primary text-2xl mb-6 mx-auto">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">仲間と成長</h3>
+                    <p class="text-gray-600 text-center">
+                        一方的なセミナーではありません。課題を提出し、フィードバックを得る「参加型」のプログラムです。同じ目標を持つ仲間と一緒に成長できます。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+                    5日間のチャレンジ内容
+                </h2>
+                <p class="text-gray-500 mt-4">Webデザインの基礎からバナー制作の実践まで</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="relative">
+                    <!-- Vertical Line -->
+                    <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 -translate-x-1/2 hidden md:block"></div>
+
+                    <!-- Day 1 -->
+                    <div class="md:flex items-center justify-between mb-12 relative group">
+                        <div class="hidden md:block w-5/12 text-right pr-8">
+                            <h3 class="text-xl font-bold text-primary">Webデザイナーとは？</h3>
+                            <p class="text-gray-600 mt-2">デザインの仕事のリアルと、これから目指すべきマインドセットについてお話しします。</p>
+                        </div>
+                        <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold z-10 shadow-lg ring-4 ring-white">
+                            1
+                        </div>
+                        <div class="md:w-5/12 pl-12 md:pl-8">
+                            <span class="inline-block px-3 py-1 bg-gray-100 text-xs font-bold rounded text-gray-500 mb-2">DAY 1</span>
+                            <h3 class="text-xl font-bold text-primary md:hidden">Webデザイナーとは？</h3>
+                            <p class="text-gray-600 mt-2 md:hidden">デザインの仕事のリアルと、これから目指すべきマインドセットについてお話しします。</p>
+                            <p class="text-sm text-gray-400 mt-2"><i class="far fa-clock"></i> 2/2 (月) 19:00 - 21:30</p>
+                        </div>
+                    </div>
+
+                    <!-- Day 2 -->
+                    <div class="md:flex items-center justify-between mb-12 relative group">
+                        <div class="md:w-5/12 text-right pr-8 order-1 md:hidden"></div> <!-- Spacer for mobile logic fix if needed, but simple stacking is fine -->
+                        
+                        <div class="md:w-5/12 pr-8 text-right hidden md:block">
+                             <span class="inline-block px-3 py-1 bg-gray-100 text-xs font-bold rounded text-gray-500 mb-2">DAY 2</span>
+                             <p class="text-sm text-gray-400 mt-2"><i class="far fa-clock"></i> 2/3 (火) 19:00 - 20:30</p>
+                        </div>
+
+                        <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-10 h-10 bg-white border-2 border-primary text-primary rounded-full flex items-center justify-center font-bold z-10 shadow-lg">
+                            2
+                        </div>
+                        
+                        <div class="md:w-5/12 pl-12 md:pl-8">
+                             <h3 class="text-xl font-bold text-primary">ツールの使い方とバナー制作</h3>
+                             <p class="text-gray-600 mt-2">無料ツール「Photopea」を使って、実際に手を動かしながらデザインの基礎操作を学びます。</p>
+                             <div class="md:hidden mt-2">
+                                <span class="inline-block px-3 py-1 bg-gray-100 text-xs font-bold rounded text-gray-500 mb-2">DAY 2</span>
+                                <p class="text-sm text-gray-400"><i class="far fa-clock"></i> 2/3 (火) 19:00 - 20:30</p>
+                             </div>
+                        </div>
+                        
+                        <!-- Desktop Left Side Content for Day 2 (Alternating Layout Logic) -->
+                         <div class="hidden md:block md:w-5/12 md:order-first md:text-right md:pr-8 absolute left-0 top-0 h-full w-full pointer-events-none">
+                            <!-- This is just to maintain structure if alternating. For simplicity in this single file, let's keep list linear on mobile and alternating on desktop manually -->
+                         </div>
+                    </div>
+                    
+                    <!-- Simplified list for remaining days to ensure stability -->
+                     <!-- Day 3 -->
+                    <div class="md:flex items-center justify-between mb-12 relative">
+                        <div class="hidden md:block w-5/12 text-right pr-8">
+                            <h3 class="text-xl font-bold text-primary">デザインの法則とレイアウト</h3>
+                            <p class="text-gray-600 mt-2">プロっぽく見せるための配置のルールや配色の基本をレクチャーします。</p>
+                        </div>
+                        <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold z-10 shadow-lg ring-4 ring-white">
+                            3
+                        </div>
+                        <div class="md:w-5/12 pl-12 md:pl-8">
+                            <span class="inline-block px-3 py-1 bg-gray-100 text-xs font-bold rounded text-gray-500 mb-2">DAY 3</span>
+                             <h3 class="text-xl font-bold text-primary md:hidden">デザインの法則とレイアウト</h3>
+                            <p class="text-gray-600 mt-2 md:hidden">プロっぽく見せるための配置のルールや配色の基本をレクチャーします。</p>
+                            <p class="text-sm text-gray-400 mt-2"><i class="far fa-clock"></i> 2/4 (水) 19:00 - 20:30</p>
+                        </div>
+                    </div>
+
+                     <!-- Day 4 -->
+                     <div class="md:flex items-center justify-between mb-12 relative">
+                         <div class="hidden md:block w-5/12 text-right pr-8">
+                             <!-- Spacer -->
+                         </div>
+                        <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-10 h-10 bg-white border-2 border-primary text-primary rounded-full flex items-center justify-center font-bold z-10 shadow-lg">
+                            4
+                        </div>
+                        <div class="md:w-5/12 pl-12 md:pl-8">
+                            <h3 class="text-xl font-bold text-primary">バナートレース＆応用</h3>
+                            <p class="text-gray-600 mt-2">既存のバナーを模写（トレース）し、デザインの構成力を高めます。</p>
+                             <div class="mt-2">
+                                <span class="inline-block px-3 py-1 bg-gray-100 text-xs font-bold rounded text-gray-500 mb-2">DAY 4</span>
+                                <p class="text-sm text-gray-400"><i class="far fa-clock"></i> 2/5 (木) 19:00 - 20:30</p>
+                             </div>
+                        </div>
+                        <div class="hidden md:block w-5/12 text-right pr-8 absolute left-0 top-0">
+                           <span class="inline-block px-3 py-1 bg-gray-100 text-xs font-bold rounded text-gray-500 mb-2">DAY 4</span>
+                           <p class="text-sm text-gray-400 mt-2"><i class="far fa-clock"></i> 2/5 (木) 19:00 - 20:30</p>
+                        </div>
+                    </div>
+
+                     <!-- Day 5 -->
+                     <div class="md:flex items-center justify-between mb-12 relative">
+                        <div class="hidden md:block w-5/12 text-right pr-8">
+                            <h3 class="text-xl font-bold text-primary">最終課題・Webデザイナーへの道</h3>
+                            <p class="text-gray-600 mt-2">5日間の集大成。ここからどうやって仕事にしていくのか、具体的なステップをお伝えします。</p>
+                        </div>
+                        <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-10 h-10 bg-accent text-white rounded-full flex items-center justify-center font-bold z-10 shadow-lg ring-4 ring-white animate-pulse">
+                            5
+                        </div>
+                        <div class="md:w-5/12 pl-12 md:pl-8">
+                            <span class="inline-block px-3 py-1 bg-gray-100 text-xs font-bold rounded text-gray-500 mb-2">DAY 5 - FINAL</span>
+                             <h3 class="text-xl font-bold text-primary md:hidden">最終課題・Webデザイナーへの道</h3>
+                            <p class="text-gray-600 mt-2 md:hidden">5日間の集大成。ここからどうやって仕事にしていくのか、具体的なステップをお伝えします。</p>
+                            <p class="text-sm text-gray-400 mt-2"><i class="far fa-clock"></i> 2/6 (金) 19:00 - 20:30</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section id="register" class="py-20 bg-primary text-white relative">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-2xl p-8 md:p-12 text-gray-800">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-primary mb-2">5日間チャレンジに参加する</h2>
+                    <p class="text-gray-500 text-sm">※満席になり次第募集を終了しますのでお早めにお申込みください。</p>
+                </div>
+
+                <form class="space-y-6">
+                    <div>
+                        <label for="email" class="block text-sm font-bold mb-2">メールアドレス <span class="text-red-500">*</span></label>
+                        <input type="email" id="email" placeholder="example@email.com" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition">
+                        <p class="text-xs text-gray-400 mt-1">※登録後、すぐに詳細メールが届きます。</p>
+                    </div>
+
+                    <button type="button" onclick="alert('実際のLPではフォーム送信処理が実行されます。')" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold text-xl py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                        無料で申し込む
+                    </button>
+                    
+                    <p class="text-xs text-center text-gray-400 mt-4">
+                        お申込み後に表示されるページに沿ってお進みください。<br>
+                        ご記入いただきました内容は、弊社の個人情報保護方針に基づき適切に取り扱い、弊社サービスの提供、及びサービスの品質改善のための分析に利用いたします。
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-gray-400 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="font-bold text-xl text-white tracking-tighter mb-6">
+                L-works<span class="text-secondary">.design</span>
+            </div>
+            <div class="flex flex-wrap justify-center gap-6 mb-8 text-sm">
+                <a href="#" class="hover:text-white transition">会社概要</a>
+                <span class="hidden md:inline">|</span>
+                <a href="#" class="hover:text-white transition">特定商取引法に基づく表示</a>
+                <span class="hidden md:inline">|</span>
+                <a href="#" class="hover:text-white transition">プライバシーポリシー</a>
+            </div>
+            <p class="text-xs">&copy; 2026 L-works Design. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Simple Countdown Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set target date to a fixed future date for demo purposes
+            // In production, this would be set to the actual event start date
+            const targetDate = new Date("2026-02-02T19:00:00").getTime();
+            
+            // If the date is passed, set it to 7 days from now for demo visualization
+            const now = new Date().getTime();
+            let finalTarget = targetDate;
+            if(now > targetDate) {
+                 finalTarget = now + (7 * 24 * 60 * 60 * 1000);
+            }
+
+            const countdownEl = document.getElementById('countdown');
+
+            const updateCountdown = () => {
+                const currentTime = new Date().getTime();
+                const distance = finalTarget - currentTime;
+
+                if (distance < 0) {
+                    countdownEl.innerHTML = "開催中";
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                countdownEl.innerHTML = `
+                    ${days}<span class="text-sm mx-1">日</span>
+                    ${hours.toString().padStart(2, '0')}<span class="text-sm mx-1">時間</span>
+                    ${minutes.toString().padStart(2, '0')}<span class="text-sm mx-1">分</span>
+                    ${seconds.toString().padStart(2, '0')}<span class="text-sm mx-1">秒</span>
+                `;
+            };
+
+            setInterval(updateCountdown, 1000);
+            updateCountdown();
+        });
+    </script>
+</body>
+</html>
